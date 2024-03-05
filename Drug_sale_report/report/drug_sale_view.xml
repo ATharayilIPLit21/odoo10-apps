@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="drug_sale_report_view" model="ir.ui.view">
+            <field name="name">drug.sale.report.view</field>
+            <field name="model">drug.sale</field>
+            <field name="arch" type="xml">
+
+                <tree>
+                    <field name="so_name" />
+                    <field name="so_date" />
+                    <field name="rp_name"/>
+                    <field name="rp1_name"/>
+                    <field name="rp1_ref"/>
+                    <field name="pt_name"/>
+                    <field name="qty"/>
+                    <field name="spl_name" />
+                    <field name="spl_life_date" />
+                    
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_drug_sale_report" model="ir.actions.act_window">
+		<field name="name">Pharmacy Drug Sale Report</field>
+		<field name="res_model">drug.sale</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree</field>
+	</record>
+	
+	<menuitem id="menu_drug_sale_report" action="action_drug_sale_report"
+		parent="stock.menu_warehouse_report"/>
+
+     </data>
+</odoo>
